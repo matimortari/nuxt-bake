@@ -1,0 +1,55 @@
+{
+  "name": "nuxt-bake",
+  "type": "module",
+  "version": "1.0.10",
+  "description": "A CLI tool to quickly scaffold a Nuxt.js starter project",
+  "author": "Matheus Mortari <matheus.felipe.19rt@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matimortari/nuxt-bake.git",
+    "directory": "cli"
+  },
+  "keywords": [
+    "starter",
+    "template",
+    "nuxt",
+    "nuxt4",
+    "nuxtjs",
+    "vue",
+    "typescript",
+    "tailwindcss"
+  ],
+  "bin": {
+    "matimortari-nuxt-bake": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf dist my-nuxt-app",
+    "test": "vitest run",
+    "coverage": "vitest --coverage",
+    "test:e2e": "playwright test",
+    "release": "npm version patch && npm publish --access public"
+  },
+  "dependencies": {
+    "chalk": "5.6.2",
+    "figures": "6.1.0",
+    "fs-extra": "11.3.3",
+    "inquirer": "13.1.0",
+    "ora": "9.0.0",
+    "rimraf": "6.1.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0",
+    "@types/fs-extra": "11.0.4",
+    "@vitest/coverage-v8": "4.0.16",
+    "typescript": "5.9.3",
+    "vitest": "4.0.16"
+  }
+}
