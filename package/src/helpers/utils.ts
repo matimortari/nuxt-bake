@@ -25,12 +25,12 @@ export const PRESET_EXTRA_PACKAGES: Record<Preset, { dependencies?: Record<strin
   },
   "with-tests": {
     devDependencies: {
-      "@nuxt/test-utils": "3.19.2",
-      "@vitest/coverage-v8": "4.0.16",
+      "@nuxt/test-utils": "3.23.0",
+      "@vitest/coverage-v8": "4.0.18",
       "@vue/test-utils": "3.20.0",
-      "happy-dom": "13.7.6",
+      "happy-dom": "20.3.4",
       "@playwright/test": "1.57.0",
-      "vitest": "4.0.16",
+      "vitest": "4.0.18",
     },
   },
 }

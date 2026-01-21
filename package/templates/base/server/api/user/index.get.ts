@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     where: { id: (await getUserFromSession(event))?.id },
   })
   if (!user) {
-    throw createError({ statusCode: 404, message: "User not found" })
+    throw createError({ status: 404, message: "User not found" })
   }
 
   return user
