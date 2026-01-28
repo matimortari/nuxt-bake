@@ -9,9 +9,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "nuxt-auth-utils",
   ],
-  imports: {
-    dirs: ["lib/**"],
-  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -31,7 +28,7 @@ export default defineNuxtConfig({
     storageKey: "nuxt-color-mode",
   },
   i18n: {
-    restructureDir: "app/lib",
+    restructureDir: "app/utils",
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     locales: [
       { code: "en-US", iso: "en-US", file: "en-US.json" },

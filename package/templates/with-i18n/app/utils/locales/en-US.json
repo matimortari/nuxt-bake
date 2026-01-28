@@ -1,0 +1,50 @@
+{
+  "locale.en-US": "EN",
+  "locale.fr-FR": "FR",
+  "index": {
+    "meta": {
+      "title": "Nuxt Bake",
+      "description": "If you're seeing this, it means you've successfully set up your Nuxt.js project via nuxt-bake."
+    },
+    "header": {
+      "title": "Nuxt Bake",
+      "description": "If you're seeing this, it means you've successfully set up your Nuxt.js project via nuxt-bake."
+    },
+    "features": "Features",
+    "featureList": {
+      "nuxt": "Nuxt 4",
+      "typescript": "TypeScript",
+      "tailwind": "Tailwind CSS 4",
+      "icons": "Nuxt Icons",
+      "fonts": "Google Fonts",
+      "pinia": "Pinia",
+      "i18n": "Nuxt i18n",
+      "oauth": "OAuth",
+      "prisma": "Prisma",
+      "eslint": "ESLint",
+      "vercel": "Vercel Analytics"
+    }
+  },
+  "signIn": {
+    "meta": {
+      "title": "Sign In",
+      "description": "Sign In page"
+    },
+    "header": "Sign In",
+    "chooseProvider": "Choose a provider to continue.",
+    "providers": {
+      "github": "Sign In With GitHub",
+      "google": "Sign In With Google"
+    }
+  },
+  "error": {
+    "unknown": "Unknown error",
+    "goHome": "Go back home"
+  },
+  "navbar": {
+    "greeting": "Hi",
+    "unauthenticated": "Unauthenticated",
+    "logout": "Logout",
+    "signIn": "Sign In"
+  }
+}

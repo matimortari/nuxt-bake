@@ -7,9 +7,6 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-shiki",
   ],
-  imports: {
-    dirs: ["lib/**"],
-  },
   vite: {
     plugins: [tailwindcss()],
   },

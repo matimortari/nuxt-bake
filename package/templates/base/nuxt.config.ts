@@ -8,9 +8,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "nuxt-auth-utils",
   ],
-  imports: {
-    dirs: ["lib/**"],
-  },
   vite: {
     plugins: [tailwindcss()],
   },
