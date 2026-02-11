@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     "nuxt-auth-utils",
   ],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss() as any],
   },
   css: ["~/assets/styles.css"],
   devtools: {

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     "nuxt-shiki",
   ],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss() as any],
   },
   css: ["~/assets/styles.css"],
   devtools: {

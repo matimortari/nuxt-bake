@@ -20,7 +20,7 @@ export const PRESET_EXTRA_PACKAGES: Record<Preset, { dependencies?: Record<strin
   "standard": {},
   "with-i18n": {
     dependencies: {
-      "@nuxtjs/i18n": "10.2.1",
+      "@nuxtjs/i18n": "10.2.3",
     },
   },
   "with-tests": {
@@ -29,7 +29,7 @@ export const PRESET_EXTRA_PACKAGES: Record<Preset, { dependencies?: Record<strin
       "@vitest/coverage-v8": "4.0.18",
       "@vue/test-utils": "3.20.0",
       "happy-dom": "20.3.4",
-      "@playwright/test": "1.57.0",
+      "@playwright/test": "1.58.2",
       "vitest": "4.0.18",
     },
   },
