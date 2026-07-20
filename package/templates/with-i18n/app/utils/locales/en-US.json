@@ -1,0 +1,58 @@
+{
+  "locale.en-US": "EN",
+  "locale.fr-FR": "FR",
+  "index": {
+    "meta": {
+      "title": "Nuxt Bake",
+      "description": "If you're seeing this, it means you've successfully set up your Nuxt.js project via nuxt-bake."
+    },
+    "header": {
+      "title": "Nuxt Bake",
+      "description": "If you're seeing this, it means you've successfully set up your Nuxt.js project via nuxt-bake."
+    },
+    "features": "Features",
+    "featureList": {
+      "nuxt": "Nuxt 4",
+      "typescript": "TypeScript 7",
+      "tailwind": "Tailwind CSS 4",
+      "icons": "Nuxt Icons",
+      "fonts": "Google Fonts",
+      "pinia": "Pinia",
+      "i18n": "Nuxt i18n",
+      "oauth": "OAuth",
+      "prisma": "Prisma",
+      "eslint": "ESLint",
+      "seo": "Nuxt SEO"
+    }
+  },
+  "signIn": {
+    "meta": {
+      "title": "Sign In",
+      "description": "Sign In page"
+    },
+    "header": "Sign In",
+    "chooseProvider": "Choose a provider to continue.",
+    "providers": {
+      "github": "Sign In With GitHub",
+      "google": "Sign In With Google"
+    },
+    "messages": {
+      "googleOAuthFailed": "Google sign in failed. Please try again.",
+      "githubOAuthFailed": "GitHub sign in failed. Please try again.",
+      "sessionExpired": "Your session has expired. Please sign in again.",
+      "sessionTimeout": "You were signed out due to inactivity.",
+      "unknownError": "Authentication failed. Please try again."
+    }
+  },
+  "error": {
+    "unknown": "Unknown error",
+    "description": "Please try going back to the homepage or refreshing the page.",
+    "goHome": "Go Back"
+  },
+  "navbar": {
+    "greeting": "Hi",
+    "unauthenticated": "Unauthenticated",
+    "logout": "Logout",
+    "signIn": "Sign In"
+  }
+}
