@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-bake-monorepo",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "web/",
+    "package/"
+  ],
+  "scripts": {
+    "lint": "bun --cwd web lint && bun --cwd package lint",
+    "lint:fix": "bun --cwd web lint:fix && bun --cwd package lint:fix",
+    "typecheck": "bun --cwd web typecheck && bun --cwd package typecheck"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "9.3.0",
+    "@types/node": "26.2.0",
+    "@typescript/native": "npm:typescript@7.0.2",
+    "eslint": "10.8.0",
+    "eslint-plugin-format": "2.0.0",
+    "typescript": "6.0.2"
+  }
+}

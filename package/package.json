@@ -1,0 +1,56 @@
+{
+  "name": "nuxt-bake",
+  "type": "module",
+  "version": "1.0.10",
+  "description": "A CLI tool to quickly scaffold a Nuxt.js starter project",
+  "author": "Matheus Mortari <matheus.felipe.19rt@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matimortari/nuxt-bake.git",
+    "directory": "package"
+  },
+  "keywords": [
+    "starter",
+    "template",
+    "nuxt",
+    "nuxt4",
+    "nuxtjs",
+    "vue",
+    "typescript",
+    "tailwindcss",
+    "prisma"
+  ],
+  "bin": {
+    "nuxt-bake": "dist/src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf dist my-nuxt-app",
+    "test": "vitest run",
+    "coverage": "vitest --coverage",
+    "test:e2e": "playwright test",
+    "release:patch": "npm version patch && npm publish --access public",
+    "release:minor": "npm version minor && npm publish --access public",
+    "release:major": "npm version major && npm publish --access public"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "8.5.2",
+    "figures": "6.1.0",
+    "yocto-spinner": "1.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.60.0",
+    "@types/node": "26.2.0",
+    "@vitest/coverage-v8": "4.1.10",
+    "vitest": "4.1.10"
+  }
+}

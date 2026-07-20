@@ -1,0 +1,58 @@
+{
+  "locale.en-US": "EN",
+  "locale.fr-FR": "FR",
+  "index": {
+    "meta": {
+      "title": "Nuxt.js Départ",
+      "description": "Si vous voyez ceci, cela signifie que vous avez configuré avec succès votre projet Nuxt.js via nuxt-bake."
+    },
+    "header": {
+      "title": "Nuxt.js Départ",
+      "description": "Si vous voyez ceci, cela signifie que vous avez configuré avec succès votre projet Nuxt.js via nuxt-bake."
+    },
+    "features": "Fonctionnalités",
+    "featureList": {
+      "nuxt": "Nuxt 4",
+      "typescript": "TypeScript 7",
+      "tailwind": "Tailwind CSS 4",
+      "icons": "Nuxt Icons",
+      "fonts": "Google Fonts",
+      "pinia": "Pinia",
+      "i18n": "Nuxt i18n",
+      "oauth": "OAuth",
+      "prisma": "Prisma",
+      "eslint": "ESLint",
+      "seo": "Nuxt SEO"
+    }
+  },
+  "signIn": {
+    "meta": {
+      "title": "Connexion",
+      "description": "Page de connexion"
+    },
+    "header": "Connexion",
+    "chooseProvider": "Choisissez un fournisseur pour continuer.",
+    "providers": {
+      "github": "Se connecter avec GitHub",
+      "google": "Se connecter avec Google"
+    },
+    "messages": {
+      "googleOAuthFailed": "La connexion Google a échoué. Veuillez réessayer.",
+      "githubOAuthFailed": "La connexion GitHub a échoué. Veuillez réessayer.",
+      "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+      "sessionTimeout": "Vous avez été déconnecté en raison de l'inactivité.",
+      "unknownError": "L'authentification a échoué. Veuillez réessayer."
+    }
+  },
+  "error": {
+    "unknown": "Erreur inconnue",
+    "description": "Veuillez essayer de retourner à la page d'accueil ou de rafraîchir la page.",
+    "goHome": "Retour"
+  },  
+  "navbar": {
+    "greeting": "Salut",
+    "unauthenticated": "Non authentifié",
+    "logout": "Déconnexion",
+    "signIn": "Connexion"
+  }
+}
