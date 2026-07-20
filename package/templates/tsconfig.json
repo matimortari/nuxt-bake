@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "noCheck": true,
+    "noEmit": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext"
+  },
+  "include": ["./**/*"]
+}
