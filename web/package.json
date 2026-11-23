@@ -24,10 +24,13 @@
     "@iconify-json/simple-icons": "1.2.103",
     "@nuxt/icon": "2.6.3",
     "@tailwindcss/vite": "4.3.5",
+    "@types/node": "26.6.6",
     "eslint": "10.15.0",
     "eslint-plugin-better-tailwindcss": "4.11.0",
     "eslint-plugin-format": "2.0.0",
     "nuxt-shiki": "0.3.2",
-    "tailwindcss": "4.3.5"
+    "tailwindcss": "4.3.5",
+    "typescript": "6.0.2",
+    "vue-tsc": "3.3.12"
   }
 }

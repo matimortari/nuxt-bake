@@ -15,8 +15,7 @@
     "lint:fix": "bun --cwd web lint:fix && bun --cwd package lint:fix",
     "typecheck": "bun --cwd web typecheck && bun --cwd package typecheck",
     "test": "bun --cwd package test",
-    "coverage": "bun --cwd package coverage",
-    "test:e2e": "bun --cwd package test:e2e"
+    "coverage": "bun --cwd package coverage"
   },
   "devDependencies": {
     "@antfu/eslint-config": "10.0.0",

@@ -3,7 +3,7 @@
     <img src="public/wordmark.png" alt="Logo" width="300"/>
 </h1>
 
-A production-ready Nuxt.js starter with modern tooling and best practices, designed to help you build robust web applications quickly and efficiently.
+A production-ready Nuxt starter with modern tooling and best practices, designed to help you build robust web applications quickly and efficiently.
 </div>
 
 ## Repository Structure
@@ -53,7 +53,7 @@ Extends the standard template with:
 ### Create a New Project
 
 ```bash
-npx @matimortari/nuxt-bake
+npx nuxt-bake
 ```
 
 Follow the interactive prompts to:

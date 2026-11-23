@@ -1,6 +1,6 @@
 # Nuxt Bake
 
-This project was scaffolded using [**Nuxt Bake**](https://www.npmjs.com/package/nuxt-bake) – a modern Nuxt.js starter with best practices built-in.
+This project was scaffolded using [**Nuxt Bake**](https://www.npmjs.com/package/nuxt-bake) – a modern Nuxt starter with best practices built-in.
 
 ## Getting Started
 
