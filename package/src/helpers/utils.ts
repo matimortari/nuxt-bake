@@ -33,7 +33,7 @@ export const PRESET_EXTRA_PACKAGES: Record<Preset, PresetExtras> = {
   },
   "with-tests": {
     devDependencies: {
-      "@nuxt/test-utils": "4.3.4",
+      "@nuxt/test-utils": "4.4.0",
       "@vitest/coverage-v8": "5.1.0",
       "@vue/test-utils": "2.5.1",
       "happy-dom": "21.0.4",
