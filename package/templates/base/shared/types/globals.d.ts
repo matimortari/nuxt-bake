@@ -13,3 +13,16 @@ interface Toast {
   type: "success" | "danger" | "warning" | "info"
   duration?: number
 }
+
+interface ConfirmOptions {
+  title: string
+  message: string
+  confirmLabel?: string
+  cancelLabel?: string
+  variant?: "primary" | "danger" | "warning"
+}
+
+interface UIState {
+  toasts: Toast[]
+  confirmation: { isOpen: boolean, options: ConfirmOptions | null }
+}

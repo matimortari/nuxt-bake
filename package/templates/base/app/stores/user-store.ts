@@ -1,5 +1,5 @@
 export const useUserStore = defineStore("user", () => {
-  const toast = useToast()
+  const { toast } = useUI()
   const user = ref<User | null>(null)
   const loading = ref(false)
 

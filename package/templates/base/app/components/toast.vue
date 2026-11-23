@@ -25,7 +25,8 @@
 </template>
 
 <script setup lang="ts">
-const { toasts, dismiss } = useToast()
+const { toast: { list, dismiss } } = useUI()
+const toasts = computed(list)
 
 const TOAST_ICONS: { danger: string, success: string, warning: string, info: string } = {
   danger: "ph:x-circle-bold",
