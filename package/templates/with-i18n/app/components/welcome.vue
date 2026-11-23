@@ -33,9 +33,9 @@
 const { t } = useI18n()
 
 const FEATURES = [
-  { icon: "simple-icons:nuxtdotjs", label: "Nuxt 4" },
-  { icon: "simple-icons:typescript", label: "TypeScript 7" },
-  { icon: "simple-icons:tailwindcss", label: "Tailwind CSS 4" },
+  { icon: "simple-icons:nuxtdotjs", label: "Nuxt v4" },
+  { icon: "simple-icons:typescript", label: "TypeScript v7" },
+  { icon: "simple-icons:tailwindcss", label: "Tailwind CSS v4" },
   { icon: "simple-icons:iconify", label: "Nuxt Icons" },
   { icon: "ph:text-aa", label: "Google Fonts" },
   { icon: "icon-park-outline:pineapple", label: "Pinia" },

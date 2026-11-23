@@ -3,18 +3,18 @@
   "locale.fr-FR": "FR",
   "index": {
     "meta": {
-      "title": "Nuxt.js Départ",
-      "description": "Si vous voyez ceci, cela signifie que vous avez configuré avec succès votre projet Nuxt.js via nuxt-bake."
+      "title": "Nuxt Bake",
+      "description": "Si vous voyez ceci, cela signifie que vous avez configuré avec succès votre projet Nuxt via nuxt-bake."
     },
     "header": {
-      "title": "Nuxt.js Départ",
-      "description": "Si vous voyez ceci, cela signifie que vous avez configuré avec succès votre projet Nuxt.js via nuxt-bake."
+      "title": "Nuxt Bake",
+      "description": "Si vous voyez ceci, cela signifie que vous avez configuré avec succès votre projet Nuxt via nuxt-bake."
     },
     "features": "Fonctionnalités",
     "featureList": {
-      "nuxt": "Nuxt 4",
-      "typescript": "TypeScript 7",
-      "tailwind": "Tailwind CSS 4",
+      "nuxt": "Nuxt v4",
+      "typescript": "TypeScript v7",
+      "tailwind": "Tailwind CSS v4",
       "icons": "Nuxt Icons",
       "fonts": "Google Fonts",
       "pinia": "Pinia",

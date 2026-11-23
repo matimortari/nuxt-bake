@@ -1,6 +1,9 @@
 <template>
-  <button class="absolute top-3 right-3 flex items-center justify-center rounded-md p-1.5 transition-all hover:bg-muted" :title="copied ? 'Copied!' : 'Copy to clipboard'" @click="copyToClipboard">
-    <icon :name="copied ? 'ph:check' : 'ph:copy'" size="15" :class="copied ? 'text-accent' : 'text-muted-foreground'" />
+  <button
+    type="button" class="absolute top-2.5 right-2.5 flex size-8 items-center justify-center rounded-md text-neutral-400 transition-colors hover:bg-white/10 hover:text-white"
+    :title="copied ? 'Copied!' : 'Copy to clipboard'" @click="copyToClipboard"
+  >
+    <icon :name="copied ? 'ph:check-bold' : 'ph:copy'" size="15" :class="copied ? 'text-green-400' : ''" />
   </button>
 </template>
 

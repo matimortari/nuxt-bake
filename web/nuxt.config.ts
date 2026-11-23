@@ -71,7 +71,7 @@ export default defineNuxtConfig({
   },
   shiki: {
     bundledLangs: ["bash", "html", "javascript", "json", "yml", "markdown", "typescript", "vue"],
-    bundledThemes: ["catppuccin-macchiato"],
-    highlightOptions: { theme: "catppuccin-macchiato" },
+    bundledThemes: ["poimandres"],
+    highlightOptions: { theme: "poimandres" },
   },
 })

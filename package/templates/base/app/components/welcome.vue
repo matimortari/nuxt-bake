@@ -7,7 +7,7 @@
           Nuxt Bake
         </h1>
         <p>
-          If you're seeing this, it means you've successfully set up your Nuxt.js project via <code class="text-primary">Nuxt Bake</code>.
+          If you're seeing this, it means you've successfully set up your Nuxt project via <code class="text-primary">Nuxt Bake</code>.
         </p>
       </div>
     </header>
@@ -31,9 +31,9 @@
 
 <script setup lang="ts">
 const FEATURES = [
-  { icon: "simple-icons:nuxtdotjs", label: "Nuxt 4" },
-  { icon: "simple-icons:typescript", label: "TypeScript 7" },
-  { icon: "simple-icons:tailwindcss", label: "Tailwind CSS 4" },
+  { icon: "simple-icons:nuxtdotjs", label: "Nuxt v4" },
+  { icon: "simple-icons:typescript", label: "TypeScript v7" },
+  { icon: "simple-icons:tailwindcss", label: "Tailwind CSS v4" },
   { icon: "simple-icons:iconify", label: "Nuxt Icons" },
   { icon: "ph:text-aa", label: "Google Fonts" },
   { icon: "icon-park-outline:pineapple", label: "Pinia" },

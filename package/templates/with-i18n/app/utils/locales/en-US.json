@@ -4,17 +4,17 @@
   "index": {
     "meta": {
       "title": "Nuxt Bake",
-      "description": "If you're seeing this, it means you've successfully set up your Nuxt.js project via nuxt-bake."
+      "description": "If you're seeing this, it means you've successfully set up your Nuxt project via nuxt-bake."
     },
     "header": {
       "title": "Nuxt Bake",
-      "description": "If you're seeing this, it means you've successfully set up your Nuxt.js project via nuxt-bake."
+      "description": "If you're seeing this, it means you've successfully set up your Nuxt project via nuxt-bake."
     },
     "features": "Features",
     "featureList": {
-      "nuxt": "Nuxt 4",
-      "typescript": "TypeScript 7",
-      "tailwind": "Tailwind CSS 4",
+      "nuxt": "Nuxt v4",
+      "typescript": "TypeScript v7",
+      "tailwind": "Tailwind CSS v4",
       "icons": "Nuxt Icons",
       "fonts": "Google Fonts",
       "pinia": "Pinia",

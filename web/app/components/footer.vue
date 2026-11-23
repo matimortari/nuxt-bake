@@ -1,15 +1,15 @@
 <template>
-  <footer class="container mx-auto flex flex-row items-center justify-between border-t border-muted p-4">
+  <footer class="mt-8 flex w-full items-center justify-between border-t px-4 py-6 md:px-0">
     <p class="text-xs font-medium text-muted-foreground">
-      © {{ new Date().getFullYear() }} Nuxt Bake. All rights reserved.
+      © {{ new Date().getFullYear() }} Nuxt Bake
     </p>
 
-    <div class="flex flex-row items-center gap-4">
-      <nuxt-link to="https://www.npmjs.com/package/nuxt-bake" target="_blank" class="text-muted-foreground transition-all hover:scale-110 hover:text-foreground">
-        <icon name="simple-icons:npm" size="25" />
+    <div class="flex items-center gap-3">
+      <nuxt-link to="https://www.npmjs.com/package/nuxt-bake" target="_blank" class="text-muted-foreground transition-colors hover:text-foreground">
+        <icon name="simple-icons:npm" size="20" />
       </nuxt-link>
-      <nuxt-link to="https://github.com/matimortari/nuxt-bake" target="_blank" class="text-muted-foreground transition-all hover:scale-110 hover:text-foreground">
-        <icon name="simple-icons:github" size="25" />
+      <nuxt-link to="https://github.com/matimortari/nuxt-bake" target="_blank" class="text-muted-foreground transition-colors hover:text-foreground">
+        <icon name="simple-icons:github" size="20" />
       </nuxt-link>
     </div>
   </footer>
