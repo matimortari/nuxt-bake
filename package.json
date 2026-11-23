@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "bun --cwd web lint && bun --cwd package lint",
     "lint:fix": "bun --cwd web lint:fix && bun --cwd package lint:fix",
-    "typecheck": "bun --cwd web typecheck && bun --cwd package typecheck"
+    "typecheck": "bun --cwd web typecheck && bun --cwd package typecheck",
+    "test": "bun --cwd package test"
   },
   "devDependencies": {
     "@antfu/eslint-config": "10.0.0",
