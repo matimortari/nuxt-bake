@@ -12,7 +12,7 @@
       </div>
     </header>
 
-    <hr class="border-primary! w-4/5">
+    <hr class="w-4/5 border-primary!">
 
     <div class="flex flex-col items-center gap-2">
       <h2 class="text-lg font-semibold">
@@ -45,6 +45,6 @@ const FEATURES = [
   { icon: "simple-icons:playwright", label: "Playwright" },
   { icon: "simple-icons:vitest", label: "Vitest" },
   { icon: "simple-icons:eslint", label: "ESLint" },
-  { icon: "ph:translate", label: "i18n" }
+  { icon: "ph:translate", label: "i18n" },
 ]
 </script>

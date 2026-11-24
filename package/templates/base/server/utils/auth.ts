@@ -6,7 +6,7 @@ export async function handleOAuthUser(event: H3Event, userData: OAuthUserData) {
 
   const account = await db.account.findUnique({
     where: { provider_providerAccountId: { provider, providerAccountId } },
-    include: { user: true },
+    select: { user: { select: { id: true, email: true, name: true, image: true } } },
   })
 
   let sessionUser: User | null = account?.user ?? null
@@ -17,6 +17,7 @@ export async function handleOAuthUser(event: H3Event, userData: OAuthUserData) {
 
     const existingUser = await db.user.findFirst({
       where: { email: { equals: email, mode: "insensitive" } },
+      select: { id: true, email: true, name: true, image: true },
     })
     if (existingUser) {
       await db.account.create({ data: { userId: existingUser.id, provider, providerAccountId } })
@@ -30,6 +31,7 @@ export async function handleOAuthUser(event: H3Event, userData: OAuthUserData) {
           image: image || undefined,
           accounts: { create: { provider, providerAccountId } },
         },
+        select: { id: true, email: true, name: true, image: true },
       })
       sessionUser = newUser
     }

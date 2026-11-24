@@ -11,7 +11,7 @@
             <span class="text-caption wrap-break-word">{{ toast.message }}</span>
           </div>
           <button
-            class="flex shrink-0 items-center justify-center rounded-sm border-none bg-transparent p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            type="button" class="flex shrink-0 items-center justify-center rounded-sm border-none bg-transparent p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             aria-label="Close notification" @click="dismiss(toast.id)"
           >
             <icon name="mdi:close" size="15" />
@@ -48,7 +48,6 @@ const TOAST_BG: { danger: string, success: string, warning: string, info: string
   warning: "bg-warning",
   info: "bg-info",
 }
-
 </script>
 
 <style scoped>
@@ -68,8 +67,8 @@ const TOAST_BG: { danger: string, success: string, warning: string, info: string
 .toast-enter-active,
 .toast-leave-active {
   transition:
-    opacity 0.25s var(--transition),
-    transform 0.35s var(--transition);
+    opacity var(--duration-base) var(--ease-emphasized),
+    transform var(--duration-slow) var(--ease-emphasized);
 }
 .toast-enter-from {
   opacity: 0;
@@ -84,6 +83,6 @@ const TOAST_BG: { danger: string, success: string, warning: string, info: string
   width: 100%;
 }
 .toast-move {
-  transition: transform 0.35s var(--transition);
+  transition: transform var(--duration-slow) var(--ease-emphasized);
 }
 </style>

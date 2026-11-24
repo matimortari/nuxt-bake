@@ -2,18 +2,25 @@ import type { EventHandlerRequest, H3Event } from "h3"
 import type { RequestEvent } from "nuxt/server"
 import { sendRedirect as redirectOAuthError } from "nuxt/server"
 
-const configs: Record<string, any> = {
-  google: {
-    clientId: process.env.NUXT_OAUTH_GOOGLE_CLIENT_ID,
-    clientSecret: process.env.NUXT_OAUTH_GOOGLE_CLIENT_SECRET,
-    redirectURL: `${process.env.NUXT_PUBLIC_BASE_URL}/api/auth/google`,
-  },
-  github: {
-    emailRequired: true,
-    clientId: process.env.NUXT_OAUTH_GITHUB_CLIENT_ID,
-    clientSecret: process.env.NUXT_OAUTH_GITHUB_CLIENT_SECRET,
-    redirectURL: `${process.env.NUXT_PUBLIC_BASE_URL}/api/auth/github`,
-  },
+function getOAuthConfig(provider: string) {
+  const baseUrl = process.env.NUXT_PUBLIC_BASE_URL
+  if (provider === "google") {
+    return {
+      clientId: process.env.NUXT_OAUTH_GOOGLE_CLIENT_ID,
+      clientSecret: process.env.NUXT_OAUTH_GOOGLE_CLIENT_SECRET,
+      redirectURL: `${baseUrl}/api/auth/google`,
+    }
+  }
+  if (provider === "github") {
+    return {
+      emailRequired: true,
+      clientId: process.env.NUXT_OAUTH_GITHUB_CLIENT_ID,
+      clientSecret: process.env.NUXT_OAUTH_GITHUB_CLIENT_SECRET,
+      redirectURL: `${baseUrl}/api/auth/github`,
+    }
+  }
+
+  return null
 }
 
 const extractUserData: Record<string, (user: any) => Omit<OAuthUserData, "provider">> = {
@@ -34,38 +41,42 @@ const extractUserData: Record<string, (user: any) => Omit<OAuthUserData, "provid
 }
 
 export default defineEventHandler(async (event: H3Event) => {
+  const ip = getRequestIP(event, { xForwardedFor: true }) || "unknown"
+  await enforceRateLimit(event, `auth:oauth:${ip}`, 5, 60 * 1000)
+
   const provider = event.context.params?.provider
-  if (!provider || !configs[provider]) {
-    throw createError({ status: 400, message: "Unknown OAuth provider" })
+  const config = provider ? getOAuthConfig(provider) : null
+  if (!provider || !config) {
+    throw createError({ statusCode: 400, statusMessage: "Unknown OAuth provider" })
   }
 
   try {
     const oauthHandler = { google: defineOAuthGoogleEventHandler, github: defineOAuthGitHubEventHandler }[provider]
     if (!oauthHandler) {
-      throw createError({ status: 400, message: `OAuth handler not found for provider: ${provider}` })
+      throw createError({ statusCode: 400, statusMessage: `OAuth handler not found for provider: ${provider}` })
     }
 
-    return await oauthHandler({ config: configs[provider], async onSuccess(event: H3Event<EventHandlerRequest>, { user }: any) {
+    return await oauthHandler({ config, async onSuccess(event: H3Event<EventHandlerRequest>, { user }: any) {
       if (!user || typeof user !== "object") {
-        throw createError({ status: 400, message: `Invalid user data from ${provider}` })
+        throw createError({ statusCode: 400, statusMessage: `Invalid user data from ${provider}` })
       }
 
       const extractor = extractUserData[provider]
       if (!extractor) {
-        throw createError({ status: 400, message: `User data extractor not found for provider: ${provider}` })
+        throw createError({ statusCode: 400, statusMessage: `User data extractor not found for provider: ${provider}` })
       }
 
       const userData = extractor(user)
       if (!userData.id || !userData.email) {
-        throw createError({ status: 400, message: `Missing required user data from ${provider}` })
+        throw createError({ statusCode: 400, statusMessage: `Missing required user data from ${provider}` })
       }
 
       return handleOAuthUser(event, { ...userData, provider: provider as OAuthUserData["provider"] })
-    }, async onError(event: RequestEvent) {
+    }, onError(event: RequestEvent) {
       return redirectOAuthError(event, `/sign-in?error=${provider}_oauth_failed`)
     } })(event as unknown as RequestEvent)
   }
   catch (err: unknown) {
-    throw createError({ status: 500, message: "OAuth processing failed", data: { provider, error: err instanceof Error ? err.message : String(err) } })
+    throw createError({ statusCode: 500, statusMessage: "OAuth processing failed", data: { provider, error: err instanceof Error ? err.message : String(err) } })
   }
 })

@@ -13,7 +13,11 @@
       <span v-if="errorMessage" class="text-danger">{{ errorMessage }}</span>
 
       <div class="flex flex-row items-center gap-4">
-        <button v-for="provider in OAUTH_PROVIDERS" :key="provider.name" class="btn" @click="navigateTo(`/api/auth/${provider.name}`, { external: true })">
+        <button
+          v-for="provider in OAUTH_PROVIDERS" :key="provider.name"
+          type="button" class="btn"
+          @click="navigateTo(`/api/auth/${provider.name}`, { external: true })"
+        >
           <icon :name="provider.icon" size="25" />
           <span>{{ provider.label }}</span>
         </button>
@@ -47,6 +51,8 @@ const errorMessage = computed(() => {
 
   return messages[error] || "Authentication failed. Please try again."
 })
+
+definePageMeta({ middleware: "guest" })
 
 useHead({
   title: "Sign In",

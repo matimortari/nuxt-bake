@@ -1,20 +1,20 @@
 <template>
-  <nav class="flex w-full flex-row items-center justify-between gap-2 p-4">
-    <div class="flex flex-row items-center gap-2">
+  <nav class="navigation-group w-full justify-between p-4">
+    <div class="navigation-group">
       <nuxt-link to="/">
         <icon name="simple-icons:nuxt" size="35" class="text-primary" />
       </nuxt-link>
 
-      <div v-if="loggedIn" class="flex flex-row items-center gap-2">
+      <div v-if="loggedIn" class="navigation-group">
         <p class="text-sm">
           {{ t('navbar.greeting', { name: user?.name }) }}
         </p>
-        <button class="btn" @click="signOut">
+        <button type="button" class="btn" @click="signOut">
           {{ t('navbar.logout') }}
         </button>
       </div>
 
-      <div v-else class="flex flex-row items-center gap-2">
+      <div v-else class="navigation-group">
         <p class="text-sm">
           {{ t('navbar.unauthenticated') }}
         </p>
@@ -24,16 +24,20 @@
       </div>
     </div>
 
-    <div class="flex flex-row items-center gap-2">
+    <div class="navigation-group">
       <nuxt-link to="https://github.com/matimortari/nuxt-bake" class="btn">
         <icon name="simple-icons:github" size="20" />
       </nuxt-link>
 
-      <button class="btn" @click="toggleTheme">
+      <button type="button" class="btn" @click="toggleTheme">
         <icon :name="themeIcon" size="20" />
       </button>
 
-      <button v-for="language in availableLocales" :key="language" class="cursor-pointer outline-none hover:underline" @click="() => setLanguage(language)">
+      <button
+        v-for="language in availableLocales" :key="language"
+        type="button" class="cursor-pointer outline-none hover:underline"
+        @click="() => setLanguage(language)"
+      >
         {{ t(`locale.${language}`) }}
       </button>
     </div>

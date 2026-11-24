@@ -25,6 +25,6 @@ useLocaleHead({ dir: true, seo: true })
 useHead({
   htmlAttrs: { lang: computed(() => locale.value) },
   link: [{ rel: "icon", href: "/favicon.svg" }],
-  meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" },],
+  meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
 })
 </script>

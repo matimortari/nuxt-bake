@@ -49,7 +49,7 @@
     "unknown": "Erreur inconnue",
     "description": "Veuillez essayer de retourner à la page d'accueil ou de rafraîchir la page.",
     "goHome": "Retour"
-  },  
+  },
   "navbar": {
     "greeting": "Salut",
     "unauthenticated": "Non authentifié",

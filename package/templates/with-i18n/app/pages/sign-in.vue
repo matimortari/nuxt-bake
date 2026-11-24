@@ -7,15 +7,20 @@
     </header>
 
     <div class="my-4 flex flex-col items-center gap-4">
-      <p class="text-muted-foreground text-lg font-semibold">
+      <p class="text-lg font-semibold text-muted-foreground">
         {{ t("signIn.chooseProvider") }}
       </p>
       <span v-if="errorMessage" class="text-danger">{{ errorMessage }}</span>
 
       <div class="flex flex-row items-center gap-4">
-        <button v-for="provider in OAUTH_PROVIDERS" :key="provider.name" class="btn" @click="navigateTo(`/api/auth/${provider.name}`, { external: true })">
+        <button
+          v-for="provider in OAUTH_PROVIDERS" :key="provider.name"
+          type="button" class="btn"
+          @click="navigateTo(`/api/auth/${provider.name}`, { external: true })"
+        >
           <icon :name="provider.icon" size="25" />
-          <span>{{ provider.label }}</span>        </button>
+          <span>{{ provider.label }}</span>
+        </button>
       </div>
     </div>
   </div>
@@ -37,20 +42,21 @@ const errorMessage = computed(() => {
   }
 
   const messages: Record<string, string> = {
-    "GoogleOAuthFailed": t("signIn.messages.googleOAuthFailed"),
-    "GitHubOAuthFailed": t("signIn.messages.githubOAuthFailed"),
+    GoogleOAuthFailed: t("signIn.messages.googleOAuthFailed"),
+    GitHubOAuthFailed: t("signIn.messages.githubOAuthFailed"),
     email_unverified: t("signIn.messages.emailUnverified"),
     google_oauth_failed: t("signIn.messages.googleOAuthFailed"),
     github_oauth_failed: t("signIn.messages.githubOAuthFailed"),
     session_expired: t("signIn.messages.sessionExpired"),
     session_timeout: t("signIn.messages.sessionTimeout"),
-    "SessionExpired": t("signIn.messages.sessionExpired"),
-    "SessionTimeout": t("signIn.messages.sessionTimeout"),
+    SessionExpired: t("signIn.messages.sessionExpired"),
+    SessionTimeout: t("signIn.messages.sessionTimeout"),
   }
 
   return messages[error] || t("signIn.messages.unknownError")
-
 })
+
+definePageMeta({ middleware: "guest" })
 
 useHead({
   title: t("signIn.meta.title"),

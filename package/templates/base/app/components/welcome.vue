@@ -20,7 +20,7 @@
       </h2>
 
       <ul class="grid grid-cols-2 gap-4 md:grid-cols-5">
-        <li v-for="(feature, index) in FEATURES" :key="index" class="flex flex-row items-center gap-2 text-xs font-semibold md:text-sm">
+        <li v-for="(feature, index) in FEATURES" :key="index" class="navigation-group text-xs font-semibold md:text-sm">
           <icon :name="feature.icon" :size="20" class="text-primary" />
           <span>{{ feature.label }}</span>
         </li>
