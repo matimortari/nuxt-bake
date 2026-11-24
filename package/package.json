@@ -1,7 +1,7 @@
 {
   "name": "nuxt-bake",
   "type": "module",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A CLI tool to quickly scaffold a Nuxt starter project",
   "author": "Matheus Mortari <matheus.felipe.19rt@gmail.com>",
   "license": "MIT",
