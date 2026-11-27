@@ -5,7 +5,7 @@
     <section class="relative flex flex-col items-center px-4 py-16 text-center md:px-8 md:py-24">
       <div class="dot-overlay" />
 
-      <div class="relative z-10 flex w-full max-w-3xl flex-col items-center gap-6">
+      <div class="relative z-10 flex w-full max-w-3xl flex-col items-center gap-4">
         <div class="h-1 w-14 origin-left bg-primary" />
 
         <h1 class="hero-heading">
@@ -16,13 +16,13 @@
           A production-ready Nuxt starter with modern tooling and best practices.
         </p>
 
-        <div class="flex flex-col items-center gap-3 sm:flex-row">
+        <div class="flex flex-col items-center gap-2 md:flex-row">
           <a href="#start" class="btn-primary rounded-full! px-5!">
             Get started
-            <icon name="ph:arrow-down-bold" size="16" />
+            <icon name="ph:arrow-down-bold" size="15" />
           </a>
           <nuxt-link to="https://github.com/matimortari/nuxt-bake" target="_blank" class="btn-ghost rounded-full! px-5!">
-            <icon name="simple-icons:github" size="16" />
+            <icon name="simple-icons:github" size="15" />
             View source
           </nuxt-link>
         </div>
@@ -56,7 +56,7 @@
 
         <div class="features-grid">
           <article v-for="(feature, index) in visibleFeatures" :key="`${activeTab}-${index}`" class="feature-item">
-            <icon :name="feature.icon" class="feature-icon text-primary" size="22" />
+            <icon :name="feature.icon" class="feature-icon text-primary" size="20" />
             <div class="flex flex-col gap-1">
               <h3 class="text-base! leading-none! font-bold">
                 {{ feature.label }}
@@ -79,7 +79,7 @@
         <ol class="mt-2 flex flex-col">
           <li class="step-row">
             <span class="step-badge">1</span>
-            <div class="flex min-w-0 flex-col gap-3">
+            <div class="flex min-w-0 flex-col gap-2">
               <div>
                 <h6>Scaffold your project</h6>
                 <p class="text-caption mt-1">
@@ -95,8 +95,8 @@
 
           <li class="step-row">
             <span class="step-badge">2</span>
-            <div class="flex min-w-0 flex-col gap-3">
-              <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div class="flex min-w-0 flex-col gap-2">
+              <div class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h6>Install dependencies</h6>
                   <p class="text-caption mt-1">
@@ -106,10 +106,8 @@
                 <div class="pm-tabs shrink-0">
                   <button
                     v-for="pm in PACKAGE_MANAGERS" :key="pm"
-                    type="button"
-                    class="cli-tab cli-tab--auto"
-                    :class="activePm === pm ? 'cli-tab--active' : ''"
-                    @click="activePm = pm"
+                    type="button" class="cli-tab cli-tab--auto"
+                    :class="activePm === pm ? 'cli-tab--active' : ''" @click="activePm = pm"
                   >
                     {{ pm }}
                   </button>
@@ -124,7 +122,7 @@
 
           <li class="step-row">
             <span class="step-badge">3</span>
-            <div class="flex min-w-0 flex-col gap-3">
+            <div class="flex min-w-0 flex-col gap-2">
               <div>
                 <h6>Configure environment variables</h6>
                 <p class="text-caption mt-1">
@@ -140,7 +138,7 @@
 
           <li class="step-row">
             <span class="step-badge">4</span>
-            <div class="flex min-w-0 flex-col gap-3">
+            <div class="flex min-w-0 flex-col gap-2">
               <div>
                 <h6>Set up the database</h6>
                 <p class="text-caption mt-1">
@@ -156,7 +154,7 @@
 
           <li class="step-row border-b-0!">
             <span class="step-badge">5</span>
-            <div class="flex min-w-0 flex-col gap-3">
+            <div class="flex min-w-0 flex-col gap-2">
               <div>
                 <h6>Start the development server</h6>
                 <p class="text-caption mt-1">

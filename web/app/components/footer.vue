@@ -4,7 +4,7 @@
       © {{ new Date().getFullYear() }} Nuxt Bake
     </p>
 
-    <div class="flex items-center gap-3">
+    <div class="navigation-group">
       <nuxt-link to="https://www.npmjs.com/package/nuxt-bake" target="_blank" class="text-muted-foreground transition-colors hover:text-foreground">
         <icon name="simple-icons:npm" size="20" />
       </nuxt-link>
